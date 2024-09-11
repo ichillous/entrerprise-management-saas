@@ -1,11 +1,12 @@
 HELP.md
-
+.gitignore
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-!**/src/main/resources/**
-!**/src/main/resources/application.yml
+
+.yml
+
 
 ### STS ###
 .apt_generated

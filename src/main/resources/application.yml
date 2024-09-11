@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: HusnaBackend
+  datasource:
+    url: jdbc:postgresql://localhost:5432/husnabackend
+    username: admin@husna.app
+    password: Mansoor#106Pizza%$#
+    driver-class-name: org.postgresql.Driver
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 247772282537-v2e530hm4fas8i6b51im9vjg0urate4o.apps.googleusercontent.com
+            client-secret: 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
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  reactor:
+    debug-agent:
+      enabled: true
+app:
+  jwtSecret: XyFY+oKSdIfj1eZuJYAmdG3RBNc87ZAXbOiqNl1tGR0=
+  jwtExpirationInMs: 960000000
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO  # Keep root logging at INFO to avoid too much noise
+    org.springframework.security: DEBUG  # Enable detailed logs for Spring Security
+    org.springframework.web: DEBUG  # Enable detailed logs for Spring Web layer (controllers, etc.)
+    app.husna.husnabackend: DEBUG  # Enable debug logs for your application package
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n"  # Clean and concise log pattern
