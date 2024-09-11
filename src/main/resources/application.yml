@@ -6,15 +6,6 @@ spring:
     username: admin@husna.app
     password: Mansoor#106Pizza%$#
     driver-class-name: org.postgresql.Driver
-
-  security:
-    oauth2:
-      client:
-        registration:
-          google:
-            client-id: 247772282537-v2e530hm4fas8i6b51im9vjg0urate4o.apps.googleusercontent.com
-            client-secret: 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
-
   jpa:
     hibernate:
       ddl-auto: update
@@ -31,7 +22,6 @@ app:
   jwtExpirationInMs: 960000000
 server:
   port: 8080
-
 logging:
   level:
     root: INFO  # Keep root logging at INFO to avoid too much noise
